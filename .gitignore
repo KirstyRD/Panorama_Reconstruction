@@ -1,5 +1,7 @@
-.*.swp
-.*~
-test.py
+# Python cache
+__pycache__/
+.pytest_cache/
 *.pyc
-gg.*
+.venv/
+venv/
+.env
