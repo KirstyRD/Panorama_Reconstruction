@@ -31,6 +31,8 @@ Once I understood the process, I was able to reverse it by working backwards, pa
 
 I debugged my code by saving the output image to file and checking it for errors. Finally, I tidied up the codebase and added a main module.
 
+The original process is found in src/Equirectangular.py and the reversed process is found in src/Perspective.py. I put the various transformations in src/transformations.py.
+
 ### Evaluating the solution
 
 When transforming from panorama to 2D perspective, most of the pixels from the original image are lost. Performing the transformation in reverse will only reconstruct a subset of the original image. I made the decision to overlay the reconstructed segment onto a black background, in the location where the original segment of the panorama would have been. In order to evaluate the reconstruction, I simply added a mask over the rest of the original panorama image and checked how "similar" this image was to the reconstruction.
